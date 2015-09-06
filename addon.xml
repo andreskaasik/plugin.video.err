@@ -10,9 +10,9 @@
     <platform>all</platform>
     <language>en</language>
     <summary lang="et">ERR videos</summary>
-    <website>![CDATA[https://github.com/andreskaasik/plugin.video.err]]</website>
-    <source>![CDATA[https://github.com/andreskaasik/plugin.video.err]]</source>
-    <description lang="en">![CDATA[Eesti Rahvusringhääling live TV and and videos]]</description>
-    <license>![CDATA[Non commercial. See https://github.com/andreskaasik/plugin.video.err/blob/master/LICENSE]]</license>
+    <website>https://github.com/andreskaasik/plugin.video.err</website>
+    <source>https://github.com/andreskaasik/plugin.video.err</source>
+    <description lang="en">Eesti Rahvusringhääling live TV and and videos</description>
+    <license>Non commercial. See https://github.com/andreskaasik/plugin.video.err/]</license>
   </extension>
 </addon>
