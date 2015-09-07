@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">General</string>
+    <string id="30010">RSS feed</string>
+    <string id="30020">ETV live</string>
+	<string id="30030">ETV logo</string>
+    <string id="30040">ETV2 live</string>
+	<string id="30050">ETV2 logo</string>
+</strings>

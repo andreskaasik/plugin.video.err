@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+		<setting id="err.rss" type="text" label="30010" default="http://uudised.err.ee/rss" />
+        <setting type="sep" />		
+		<setting id="err.etv.live" type="text" label="30020" default="rtsp://wowzalive.err.ee:80/live/etv" />
+		<setting id="err.etv.logo" type="text" label="30030" default="http://etv2.err.ee/Content/images/global/etv-logo.png" />
+		<setting id="err.etv2.live" type="text" label="30040" default="rtsp://wowzalive.err.ee:80/live/etv2" />
+		<setting id="err.etv2.logo" type="text" label="30050" default="http://etv2.err.ee/Content/images/global/etv2-logo.png" />
+    </category>
+</settings>

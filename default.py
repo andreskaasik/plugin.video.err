@@ -1,3 +1,4 @@
+import os
 import sys
 import string
 import threading
@@ -6,20 +7,31 @@ import urllib
 import urlparse
 import xbmcgui
 import xbmcplugin
-from resources.lib import requests
-from resources.lib import feedparser
 
-base_url = sys.argv[0]
+try:
+    import feedparser
+except:
+    sys.path.append(os.path.join(os.path.realpath(os.path.dirname(__file__)),'..','script.module.feedparser','lib'))
+    import feedparser
+
+try:
+    import requests
+except:
+    sys.path.append(os.path.join(os.path.realpath(os.path.dirname(__file__)),'..','script.module.requests','lib'))
+    import requests
+
+addon_base_url = sys.argv[0]
 addon_handle = int(sys.argv[1])
 args = urlparse.parse_qs(sys.argv[2][1:])
-url_etv = 'rtsp://194.36.162.51:80/live/etv'
-url_etv_logo = 'http://etv2.err.ee/Content/images/global/etv-logo.png'
-url_etv2 = 'rtsp://194.36.162.51:80/live/etv2'
-url_etv2_logo = 'http://etv2.err.ee/Content/images/global/etv2-logo.png'
-url_rss = 'http://uudised.err.ee/rss'
+
+url_etv = xbmcplugin.getSetting(addon_handle,'err.etv.live')
+url_etv_logo = xbmcplugin.getSetting(addon_handle,'err.etv.logo')
+url_etv2 = xbmcplugin.getSetting(addon_handle,'err.etv2.live')
+url_etv2_logo = xbmcplugin.getSetting(addon_handle,'err.etv2.logo')
+url_rss = xbmcplugin.getSetting(addon_handle,'err.rss')
 
 def build_url(query):
-    return base_url + '?' + urllib.urlencode(query)
+    return addon_base_url + '?' + urllib.urlencode(query)
 
 def read_post(p,q):
     session = requests.Session()
